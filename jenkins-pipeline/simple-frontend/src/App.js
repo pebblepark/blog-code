@@ -1,4 +1,5 @@
-
+import logo from './logo.svg';
+import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -15,8 +16,13 @@ function App() {
   }, []);
 
   return (
-    <div >
-      {response}
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          {response}
+        </p>
+      </header>
     </div>
   );
 }
